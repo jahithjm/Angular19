@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-primary-button',
@@ -10,8 +10,9 @@ import { Component, input } from '@angular/core';
 export class PrimaryButtonComponent {
 
   label= input('');
+  btnClicked=Output('');
 
   handleButtonClick(){
-    console.log('Button clicked:');
+    console.log("Button clicked")
   }
 }

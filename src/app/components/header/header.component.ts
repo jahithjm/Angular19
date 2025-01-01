@@ -11,4 +11,8 @@ import { PrimaryButtonComponent } from "../primary-button/primary-button.compone
 export class HeaderComponent {
 
   title=signal("hello world from signal");
+
+  showButtonClick(){
+    console.log(" showButtonClick");
+  }
 }
