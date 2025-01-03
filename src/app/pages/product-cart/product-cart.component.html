@@ -12,12 +12,12 @@
     <h2>{{ product().title }}</h2>
     <p class="text-gray-600">{{ product().price }}</p>
     <p class="text-gray-500 text-sm">Price: {{ "$" + product().price }}</p>
-    <app-primary-button label="Add to Cart" class="mt-3"></app-primary-button>
+    <app-primary-button label="Add to Cart" (btnClicked)="cartService.addToCart(product())" class="mt-3"></app-primary-button>
 
   </div>
 
-      <span class="absolute top-2 right-3 font-bold"
-      [class]="product().stock?'text-green-500':'text-red-500'"
+      <span class="absolute top-2  right-3 font-bold"
+      [class]="product().stock?'text-green-500':'text-red-500 my-auto'"
       >
         @if (product().stock) {
           {{ product().stock}} left

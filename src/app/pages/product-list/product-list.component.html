@@ -1,9 +1,9 @@
 .
-<div class="p-8 grid grid-cols-2 gap-4 ">
+<div class="p-8 grid grid-cols-4 gap-4 ">
   @for (product of product(); track product.id) {
     <div class="bg-gray-100 p-4 rounded-lg">
       <app-product-cart [product]="product" ></app-product-cart>
     </div>
-    
+
   }
 </div>

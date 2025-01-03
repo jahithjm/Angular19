@@ -1,7 +1,8 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { product } from '../../components/models/product.model';
 import { PrimaryButtonComponent } from "../../components/primary-button/primary-button.component";
 import { CommonModule } from '@angular/common';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-cart',
@@ -12,5 +13,6 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductCartComponent {
 
+  cartService=inject(CartService);
   product=input.required<product>();
 }
